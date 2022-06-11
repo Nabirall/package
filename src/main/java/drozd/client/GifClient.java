@@ -1,11 +1,11 @@
-package drozd.polzovatel;
+package drozd.client;
 
 import org.springframework.http.ResponseEntity;
 
 
 import java.util.Map;
 
-public interface GifPolzovatel {
 
+public interface GifClient {
     ResponseEntity<Map> getRandomGif(String apiKey, String tag);
 }

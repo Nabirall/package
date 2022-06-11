@@ -1,12 +1,14 @@
-package drozd.polzovatel;
+package drozd.client;
 
-import drozd.shablon.Exchange;
+import drozd.model.Exchange;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestParam;
 
-@org.springframework.cloud.openfeign.FeignClient(name = "OERClient", url = "${openexchangerates.url.general}")
-public interface FeignOpenChange extends OpenChangePolzovatel {
+
+@FeignClient(name = "OERClient", url = "${openexchangerates.url.general}")
+public interface OpenChangeClientFeign extends OpenChangeClient {
 
     @Override
     @GetMapping("/latest.json")

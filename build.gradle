@@ -5,7 +5,7 @@ plugins {
 	id 'application'
 }
 
-group 'gif_giver'
+group 'package'
 version '1.0-SNAPSHOT'
 
 java {
@@ -14,12 +14,12 @@ java {
 }
 
 version = '0.0.1'
-mainClassName = 'morozov.ru.MainClass'
+mainClassName = 'drozd.MainClass'
 
 task copyJarToRoot {
 	doLast {
 		copy {
-			from './build/libs/gif_example-0.0.1.jar'
+			from './build/libs/package-0.0.1.jar'
 			into "./"
 		}
 	}

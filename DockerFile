@@ -4,6 +4,6 @@ EXPOSE 8080
 
 RUN mkdir ./app
 
-COPY ./gif-0.0.1.jar ./app
+COPY ./KursValut-0.0.1.jar ./app
 
-CMD java -jar ./app/gif-0.0.1.jar
+CMD java -jar ./app/KursValut-0.0.1.jar
