@@ -1,16 +1,16 @@
 plugins {
-	id 'org.springframework.boot' version '2.3.5.RELEASE'
-	id 'io.spring.dependency-management' version '1.0.10.RELEASE'
+	id 'org.springframework.boot' version '2.7.0'
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
 	id 'application'
 }
 
-group 'package'
+group 'KursValut'
 version '1.0-SNAPSHOT'
 
 java {
-	sourceCompatibility = JavaVersion.VERSION_11
-	targetCompatibility = JavaVersion.VERSION_11
+	sourceCompatibility = JavaVersion.VERSION_17
+	targetCompatibility = JavaVersion.VERSION_17
 }
 
 version = '0.0.1'
@@ -19,7 +19,7 @@ mainClassName = 'drozd.MainClass'
 task copyJarToRoot {
 	doLast {
 		copy {
-			from './build/libs/package-0.0.1.jar'
+			from './build/libs/KursValut-0.0.1.jar'
 			into "./"
 		}
 	}
@@ -30,14 +30,14 @@ repositories {
 }
 
 ext {
-	set('springCloudVersion', 'Hoxton.SR5')
+	set('springCloudVersion', '2021.0.3')
 }
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.cloud:spring-cloud-starter-openfeign'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	testImplementation 'junit:junit:4.12'
+	testImplementation 'junit:junit:4.13.2'
 }
 
 dependencyManagement {
