@@ -1,4 +1,4 @@
-сервис, который обращается к сервису курсов валют, и отображает gif:
+Cервис, который обращается к сервису курсов валют, и отображает gif:
 если курс по отношению к USD за сегодня стал выше вчерашнего, то отдаем рандомную отсюда https HYPERLINK "https://giphy.com/search/rich" если ниже - отсюда https HYPERLINK "https://giphy.com/search/broke" Ссылки
 REST API курсов валют - https HYPERLINK "https://docs.openexchangerates.org/
 Must Have
