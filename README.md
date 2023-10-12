@@ -1,13 +1,11 @@
-# Задание
-Создать сервис, который обращается к сервису курсов валют, и отображает gif:
+сервис, который обращается к сервису курсов валют, и отображает gif:
 если курс по отношению к USD за сегодня стал выше вчерашнего, то отдаем рандомную отсюда https HYPERLINK "https://giphy.com/search/rich" если ниже - отсюда https HYPERLINK "https://giphy.com/search/broke" Ссылки
 REST API курсов валют - https HYPERLINK "https://docs.openexchangerates.org/
 Must Have
-Сервис на Spring Boot 2 + Java / Kotlin
+Сервис на Spring Boot 2 + Java 
 Запросы приходят на HTTP endpoint (должен быть написан в соответствии с rest conventions), туда передается код валюты по отношению с которой сравнивается USD
 Для взаимодействия с внешними сервисами используется Feign
-Все параметры (валюта по отношению к которой смотрится курс, адреса внешних сервисов и т.д.) вынесены в настройки
-На сервис написаны тесты (для мока внешних сервисов можно использовать @mockbean или WireMock)
+На сервис написаны тесты ( @mockbean )
 Для сборки должен использоваться Gradle
 Результатом выполнения должен быть репо на GitHub с инструкцией по запуску
 Nice to Have
@@ -33,9 +31,7 @@ GET /gg/gif/{Char Code}
 java -jar package-0.0.1.jar
 ```
 Docker:
----
-Для создания образа Docker перейти в корневую директорию проекта,  
-где лежит фаил Dockerfile:
+
 ```  
 docker build package_image:gg .  
 ```
@@ -43,10 +39,7 @@ docker build package_image:gg .
 ```
 docker run -p 8080:8080 package_image:gg 
 ``` 
-Или получить образ с DockerHub:
-```
-docker pull drozd/package:latest 
-```
+
 Запуск:
 ``` 
 docker run -p 8080:8080 --name package drozd/package:latest
